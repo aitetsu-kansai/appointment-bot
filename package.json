@@ -1,0 +1,21 @@
+{
+	"name": "grammy-bot",
+	"version": "1.0.0",
+	"main": "./src/bot.ts",
+	"license": "MIT",
+	"dependencies": {
+		"@grammyjs/hydrate": "^1.6.0",
+		"dotenv": "^17.2.3",
+		"grammy": "^1.38.3",
+		"nodemon": "^3.1.10"
+	},
+	"scripts": {
+		"start": "nodemon src/bot.ts"
+	},
+	"devDependencies": {
+		"@types/dotenv": "^8.2.3",
+		"@types/node": "^24.8.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3"
+	}
+}
