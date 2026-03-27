@@ -11,10 +11,8 @@ import { bot } from "./setup";
 // bot.use(hydrate());
 
 bot.api.setMyCommands([
-  { command: "start", description: "Starting a bot" },
-  { command: "hello", description: "Greeting from a bot" },
-  { command: "like_or_not", description: "Do you like it or not?" },
-  { command: "inline_keyboard", description: "SIU" },
+  { command: "start", description: "Главное меню" },
+  { command: "my_appointments", description: "Мои записи" },
 ]); //для создания меню команд в телеге
 
 // bot.use(async (ctx, next) => {
@@ -124,3 +122,8 @@ bot.api.setMyCommands([
 // });
 
 bot.start();
+
+bot.on("message:photo", async (ctx) => {
+  const photo = ctx.message.photo.pop();
+  console.log(photo?.file_id);
+});

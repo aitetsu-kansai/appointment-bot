@@ -2,6 +2,7 @@ export const MASTER_INFO = {
   name: "Dungeon Master",
   addres: "ул. Пушкина, д. 1488, Майами",
   phone: "+71234566778",
+  telegram: "t.me/durov_russia",
 };
 
 export const SERVICES = {

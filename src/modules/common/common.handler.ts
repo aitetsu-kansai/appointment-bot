@@ -1,8 +1,8 @@
-import { Composer, InputFile } from "grammy";
+import { Composer, InputFile, Context } from "grammy";
 import { MASTER_INFO, SERVICES } from "../../config/constants";
 import { commonKeyboard } from "./common.keyboard";
 
-export const commonComposer = new Composer();
+export const commonComposer = new Composer<Context>();
 
 commonComposer.command("start", async (ctx) => {
   const message =
@@ -24,4 +24,11 @@ commonComposer.command("start", async (ctx) => {
     reply_to_message_id: ctx.msg?.message_id,
     reply_markup: commonKeyboard,
   });
+});
+
+commonComposer.callbackQuery("portfolio", async (ctx) => {
+  await ctx.replyWithPhoto(
+    "AgACAgIAAxkBAAIB0GnG07eUhBya_Pp3__mHnhwRqWVVAALpEmsbyvs4Sgf4vMxlpQXvAQADAgADeQADOgQ",
+    { caption: "siuu" },
+  );
 });
